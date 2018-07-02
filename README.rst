@@ -2,6 +2,20 @@
 PSHITT
 ======
 
+NOTES
+============
+
+this is a modified version of pshitt (github.com/regit/pshitt) which is enabled to be used with influxdb,
+you should install the module python-influxdb since from the module influxdb are needed:
+-InfluxDBClient
+-SeriesHelper
+
+the rest of pshitt is as-is and should continue to work without fuss
+you'll need to enable influxdb logging using "-i"
+
+the combination of options with only influxdb server and no other options (other than "-i"), has been tested and works ok
+
+
 Introduction
 ============
 
@@ -45,6 +59,12 @@ Full options are available via '-h' option ::
    -v, --verbose         Show verbose output, use multiple times increase
                          verbosity
    -D, --daemon          Run as unix daemon
+   -i INFLUXDB, --influxdb INFLUXDB                        Activates Influxdb logging
+   -s INFLUXDBSRV, --influxdbsrv INFLUXDBSRV               Influxdb server address
+   -r INFLUXDBPORT, --influxdbport INFLUXDBPORT            Influxdb server port
+   -u INFLUXDBUSER, --influxdbuser INFLUXDBUSER            Influxdb server user
+   -w INFLUXDBPASS, --influxdbpass INFLUXDBPASS            Influxdb server password
+   -d INFLUXDBDB, --influxdbdb INFLUXDBDB                  Influxdb server database
 
 Using pshitt data
 =================
